@@ -17,7 +17,8 @@ console.log(typeof (+tot.outerText))
 
 var heartBtn = document.querySelectorAll('.heart')
 
-var del = document.querySelectorAll('.del')
+var del = document.querySelectorAll('.delete')
+console.log("del",del)
 // console.log(del[0].parentElement)
 
 for (let i = 0; i < PlsBtn.length; i++) {
@@ -42,6 +43,7 @@ for (let i = 0; i < minBtn.length; i++) {
 
 for (let i = 0; i < del.length; i++) {
     del[i].addEventListener("click" , ()=>{
+        console.log("i",i)
         del[i].parentElement.remove()
         tot.value = +tot.value - (+price[i].value * +qtes[i].value )  
     })    
